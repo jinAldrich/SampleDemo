@@ -10,12 +10,16 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Foundlibrary" />
+            <option value="$PROJECT_DIR$/UILibrary" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Foundlibrary" />
+            <option value="$PROJECT_DIR$/UILibrary" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>

@@ -12,14 +12,11 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPager;
-import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
 import android.transition.Slide;
-import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
@@ -42,19 +39,26 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initActivityTransitions();
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
         initViews();
 
         Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
         mToolbar.setTitleTextColor(Color.WHITE);//设置ToolBar的titl颜色
+        //mToolbar.setLogo(R.mipmap.ic_launcher);// App Logo
+        mToolbar.setTitle("");// Title
+        //mToolbar.setSubtitle("Sub title");// Sub Title
+        //mToolbar.setNavigationIcon(R.mipmap.imag_left);//Navigation Icon
         setSupportActionBar(mToolbar);
 
         ViewCompat.setTransitionName(findViewById(R.id.app_bar_layout), "");
         supportPostponeEnterTransition();
 
         mCollapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
-        mCollapsingToolbarLayout.setTitle("CollapsingToolbarLayout title");
+        //mCollapsingToolbarLayout.setTitle("标题");
         mCollapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.transparent));
+        mCollapsingToolbarLayout.setContentScrimColor(R.color.material_blue_grey_800);
+        mCollapsingToolbarLayout.setStatusBarScrimColor(R.color.colorPrimary);
+        //mCollapsingToolbarLayout.seton
     }
 
     private void initViews() {
@@ -75,10 +79,7 @@ public class MainActivity extends BaseActivity {
         head = (ImageView) findViewById(R.id.head);
 
         head.setImageDrawable(new CircleDrawable(BitmapFactory.decodeResource(getResources(), R.mipmap.small)));
-
-         initHeadBackground();
-
-
+        initHeadBackground();
     }
 
     private void initActivityTransitions() {
@@ -118,11 +119,4 @@ public class MainActivity extends BaseActivity {
         bg.setBackgroundDrawable(new BitmapDrawable(getResources(), bB));
     }
 
-    private void applyPalette() {
-        int primaryDark = getResources().getColor(R.color.material_blue_grey_800);
-        int primary = getResources().getColor(R.color.colorPrimary);
-        mCollapsingToolbarLayout.setContentScrimColor(R.color.material_blue_grey_800);
-        mCollapsingToolbarLayout.setStatusBarScrimColor(R.color.colorPrimary);
-        supportStartPostponedEnterTransition();
-    }
 }

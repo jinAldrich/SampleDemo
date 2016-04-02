@@ -12,7 +12,7 @@
 
         </activity>
 
-        <activity android:name=".activity.MainActivity">
+        <activity android:name="xrecyclerview.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,6 +20,10 @@
             </intent-filter>
 
         </activity>
+        <activity android:name="xrecyclerview.LinearActivity"/>
+        <activity android:name="xrecyclerview.GridActivity"/>
+        <activity android:name="xrecyclerview.StaggeredGridActivity"/>
     </application>
+
 
 </manifest>

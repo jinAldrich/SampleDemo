@@ -1,11 +1,10 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 22
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        applicationId "com.yujin.demo"
         minSdkVersion 18
         targetSdkVersion 22
         versionCode 1
@@ -20,13 +19,8 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project(':UILibrary')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:22.2.0'
     compile 'com.android.support:recyclerview-v7:22.2.0'
-    compile 'com.android.support:design:22.2.0'
-    compile 'com.google.code.gson:gson:2.3'
-    compile 'com.squareup.picasso:picasso:2.4.0'
-    compile 'com.android.support:cardview-v7:22.1.1'
-    compile 'com.android.support:palette-v7:22.1.1'
 }
