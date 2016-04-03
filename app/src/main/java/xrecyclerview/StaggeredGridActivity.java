@@ -9,13 +9,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.yujin.demo.BaseActivity;
 import com.yujin.uilibrary.R;
 import com.yujin.xrecyclerview.ProgressStyle;
 import com.yujin.xrecyclerview.XRecyclerView;
 
 import java.util.ArrayList;
 
-public class StaggeredGridActivity extends Activity {
+public class StaggeredGridActivity extends BaseActivity {
     private XRecyclerView mRecyclerView;
     private MyAdapter mAdapter;
     private ArrayList<String> listData;

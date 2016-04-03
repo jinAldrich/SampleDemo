@@ -3,18 +3,20 @@ package xrecyclerview;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.yujin.demo.BaseActivity;
 import com.yujin.uilibrary.R;
 import com.yujin.xrecyclerview.ProgressStyle;
 import com.yujin.xrecyclerview.XRecyclerView;
 
 import java.util.ArrayList;
 
-public class LinearActivity extends Activity {
+public class LinearActivity extends BaseActivity {
     private XRecyclerView mRecyclerView;
     private MyAdapter mAdapter;
     private ArrayList<String> listData;
@@ -32,9 +34,12 @@ public class LinearActivity extends Activity {
         mRecyclerView.setRefreshProgressStyle(ProgressStyle.BallSpinFadeLoader);
         mRecyclerView.setLaodingMoreProgressStyle(ProgressStyle.BallRotate);
         mRecyclerView.setArrowImageView(R.drawable.iconfont_downgrey);
-
+        //设置Item增加、移除动画
+        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+        //添加分割线
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL_LIST));
         View header =   LayoutInflater.from(this).inflate(R.layout.recyclerview_header, (ViewGroup)findViewById(android.R.id.content),false);
-        mRecyclerView.addHeaderView(header);
+        //mRecyclerView.addHeaderView(header);
 
         mRecyclerView.setLoadingListener(new XRecyclerView.LoadingListener() {
             @Override

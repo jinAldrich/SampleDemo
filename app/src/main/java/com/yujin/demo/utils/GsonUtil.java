@@ -30,7 +30,7 @@ public class GsonUtil {
      * @param cls
      * @return
      */
-    public static  <T> Object toObject(String jsonString,Class<T> cls ){
+    public static  <T> Object toObject(String jsonString, Class<T> cls ){
         Gson gson = new Gson();
         Object  object = gson.fromJson(jsonString, cls);
         return object;

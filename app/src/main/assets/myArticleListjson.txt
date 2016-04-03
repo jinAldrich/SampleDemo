@@ -1,0 +1,41 @@
+{
+    "data": {
+        "num": 42,
+        "list": [
+            {
+                "title": "丹麦大教堂",
+                "brief": "罗斯基勒大教堂是丹麦最杰出的建筑精品之一,世界遗产委员会将其列入世界遗产名单",
+                "imageUrl": "http://123.56.148.217:2020/bdfile/file/getFile.do?filename=/20160203/e35ed5a48fc472a80fedfea892432cc2.jpg",
+                "month": "3",
+                "day": "18",
+                "articlesType": 1
+            },
+            {
+                "title": "夏威夷海边跳伞",
+                "brief": "罗斯基勒大教堂是丹麦最杰出的建筑精品之一,世界遗产委员会将其列入世界遗产名单",
+                "imageUrl": "http://123.56.148.217:2020/bdfile/file/getFile.do?filename=/20160203/e35ed5a48fc472a80fedfea892432cc2.jpg",
+                "month": "3",
+                "day": "18",
+                "articlesType": 2
+            },
+            {
+                "title": "普吉岛海景酒店",
+                "brief": "罗斯基勒大教堂是丹麦最杰出的建筑精品之一,世界遗产委员会将其列入世界遗产名单",
+                "imageUrl": "http://123.56.148.217:2020/bdfile/file/getFile.do?filename=/20160203/e35ed5a48fc472a80fedfea892432cc2.jpg",
+                "month": "3",
+                "day": "18",
+                "articlesType": 3
+            },
+            {
+                "title": "新奥尔良烤鸡腿",
+                "brief": "罗斯基勒大教堂是丹麦最杰出的建筑精品之一,世界遗产委员会将其列入世界遗产名单",
+                "imageUrl": "http://123.56.148.217:2020/bdfile/file/getFile.do?filename=/20160203/e35ed5a48fc472a80fedfea892432cc2.jpg",
+                "month": "2",
+                "day": "15",
+                "articlesType": 4
+            }
+        ]
+    },
+    "msg": "success",
+    "code": 0
+}

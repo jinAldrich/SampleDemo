@@ -5,14 +5,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.yujin.uilibrary.R;
+import com.yujin.demo.BaseActivity;
+import com.yujin.demo.R;
 
-public class MainActivity extends Activity {
+
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_test_recyclerview);
     }
     public void gotoLinearActivity(View v) {
         Intent intent = new Intent();

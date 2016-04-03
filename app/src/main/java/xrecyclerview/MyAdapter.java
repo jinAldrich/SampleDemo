@@ -11,7 +11,7 @@ import com.yujin.uilibrary.R;
 import java.util.ArrayList;
 
 /**
- * Created by jianghejie on 15/11/26.
+ * Created by yujin on 15/11/26.
  */
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public ArrayList<String> datas = null;

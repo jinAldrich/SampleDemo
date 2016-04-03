@@ -1,0 +1,36 @@
+﻿{
+    "data": {
+        "userId": 1,
+        "nickName": "痛并快乐着",
+        "avatarUrl": "http://123.56.148.217:2020/bdfile/file/getFile.do?filename=/20160203/e35ed5a48fc472a80fedfea892432cc2.jpg",
+        "brief": "所有的事情到最后都会好起来的,如果不够好,说明还没到",
+        "isFollow": 0,
+        "label": [
+            {
+                "labelName": "文艺青年"
+            },
+            {
+                "labelName": "大叔控"
+            },
+            {
+                "labelName": "开心果"
+            }
+        ],
+        "tab": [
+            {
+                "tabName": "文章",
+                "tabNum": 42
+            },
+            {
+                "tabName": "评论",
+                "tabNum": 12
+            },
+            {
+                "tabName": "回复",
+                "tabNum": 23
+            }
+        ]
+    },
+    "msg": "success",
+    "code": 0
+}
