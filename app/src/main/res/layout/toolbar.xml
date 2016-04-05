@@ -1,26 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.v7.widget.Toolbar
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:myAttr="http://schemas.android.com/com.yujin.demo"
+    android:id="@+id/toolbar"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
-    android:minHeight="?attr/actionBarSize"
-    app:title="toolbar标题">
-    <TextView
-        android:id="@+id/toolbar_num"
-        android:layout_width="wrap_content"
+    app:layout_collapseMode="pin"
+    android:fitsSystemWindows="true"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginLeft="16dp"
-        android:text="num"
-        android:textSize="26dp" />
+        android:orientation="horizontal"
+        android:weightSum="3">
+        <LinearLayout
+            android:id="@+id/ll_toolbar_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/iv_toolbar_back"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:src="@mipmap/new_back"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_toolbar_center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_weight="1">
 
-    <TextView
-        android:id="@+id/toolbar_edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginRight="16dp"
-        android:text="编辑"
-        android:textSize="26dp" />
+            <com.yujin.demo.view.CircleImageView
+                android:id="@+id/iv_toolbar_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                myAttr:border_width="0dp"
+                android:src="@mipmap/small" />
+
+            <TextView
+                android:id="@+id/tv_toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:text="达人详情页面"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_toolbar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+        </LinearLayout>
+    </LinearLayout>
 
 </android.support.v7.widget.Toolbar>

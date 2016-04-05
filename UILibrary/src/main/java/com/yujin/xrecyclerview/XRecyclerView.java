@@ -318,7 +318,7 @@ public class XRecyclerView extends RecyclerView {
         private int headerPosition = 1;
 
         public WrapAdapter(ArrayList<View> headerViews, ArrayList<View> footViews, RecyclerView.Adapter adapter) {
-            this.adapter = adapter;
+                this.adapter = adapter;
                 this.mHeaderViews = headerViews;
                 this.mFootViews = footViews;
         }
