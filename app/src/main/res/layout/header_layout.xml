@@ -8,6 +8,7 @@
     android:orientation="vertical"
     android:padding="18dp"
     android:fitsSystemWindows="true"
+    app:layout_collapseParallaxMultiplier="0.7"
     app:layout_scrollFlags="scroll|enterAlways|snap">
 
     <!--平移时候的模糊效果-->
