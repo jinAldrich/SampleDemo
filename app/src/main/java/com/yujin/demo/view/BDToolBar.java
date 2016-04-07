@@ -20,7 +20,7 @@ import butterknife.OnClick;
 /**
  * Created by yujin on 16/4/5.
  */
-public class BDToolBar extends LinearLayout {
+public class BDToolBar extends Toolbar {
     public static final String TAG = BDToolBar.class.getSimpleName();
     @Bind(R.id.iv_toolbar_back)
     ImageView ivBack;
@@ -72,6 +72,11 @@ public class BDToolBar extends LinearLayout {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+    }
+
+    @Override
+    protected void onFinishInflate() {
+        super.onFinishInflate();
     }
 
     @OnClick({R.id.iv_toolbar_back, R.id.iv_toolbar_icon})

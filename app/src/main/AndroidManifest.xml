@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.DarenDetail" />
+        <activity android:name=".activity.DarenDetail"
+            android:launchMode="singleInstance"/>
         <activity android:name="xrecyclerview.MainActivity"></activity>
         <activity android:name="xrecyclerview.LinearActivity" />
         <activity android:name="xrecyclerview.GridActivity" />

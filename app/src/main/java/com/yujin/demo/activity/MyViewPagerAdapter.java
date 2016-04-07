@@ -29,9 +29,10 @@ public class MyViewPagerAdapter extends FragmentPagerAdapter {
     public TextView tabItemNumber;
 
     private Context mContext;
-
+    private FragmentManager mFragmentManager;
     public MyViewPagerAdapter(FragmentManager fm, Context context) {
         super(fm);
+        mFragmentManager = fm;
         mContext = context;
     }
 
@@ -56,7 +57,7 @@ public class MyViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return mFragmentsTitles.get(position);
+        return mFragmentsTitles.get(position);//TabLayout中对应Tab的标题
     }
 
     public View getTabView(int position) {

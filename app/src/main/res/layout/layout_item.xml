@@ -9,17 +9,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:layout_margin="5dp">
 
         <TextView
+            android:id="@+id/itme_tv_day"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3月" />
+            android:text="18"
+            android:textSize="15sp"/>
 
         <TextView
+            android:id="@+id/itme_tv_month"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="12日" />
+            android:text="3月"
+            android:textSize="10sp"/>
     </LinearLayout>
 
     <FrameLayout

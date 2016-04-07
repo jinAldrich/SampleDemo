@@ -1,8 +1,11 @@
 package com.yujin.demo;
 
 import android.app.Application;
+import android.content.res.AssetManager;
 import android.content.res.Configuration;
 import android.net.Uri;
+
+import org.json.JSONObject;
 
 /**
  * Created by yujin on 16/4/1.
@@ -15,6 +18,12 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+    }
+
+    public JSONObject getDeatilContent() {
+        AssetManager assetManager = this.getApplicationContext().getAssets();
+        return null;
     }
 
     @Override
