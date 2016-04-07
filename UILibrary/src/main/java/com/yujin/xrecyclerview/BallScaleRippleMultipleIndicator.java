@@ -1,4 +1,4 @@
-package com.yujin.xrecyclerview.progressindicator.indicator;
+package com.yujin.xrecyclerview;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by Jack on 2015/10/19.
  */
-public class BallScaleRippleMultipleIndicator extends BallScaleMultipleIndicator{
+public class BallScaleRippleMultipleIndicator extends BallScaleMultipleIndicator {
 
 
     @Override

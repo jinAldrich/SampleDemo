@@ -1,29 +1,24 @@
-package com.yujin.xrecyclerview.progressindicator.indicator;
+package com.yujin.xrecyclerview;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
 import android.graphics.Canvas;
 import android.graphics.Paint;
-import android.graphics.Path;
+import android.graphics.RectF;
 import android.view.animation.LinearInterpolator;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Jack on 2015/10/20.
+ * Created by Jack on 2015/10/16.
  */
-public class TriangleSkewSpinIndicator extends BaseIndicatorController {
+public class SquareSpinIndicator extends BaseIndicatorController {
 
     @Override
     public void draw(Canvas canvas, Paint paint) {
-        Path path=new Path();
-        path.moveTo(getWidth()/5,getHeight()*4/5);
-        path.lineTo(getWidth()*4/5, getHeight()*4/5);
-        path.lineTo(getWidth()/2,getHeight()/5);
-        path.close();
-        canvas.drawPath(path, paint);
+        canvas.drawRect(new RectF(getWidth()/5,getHeight()/5,getWidth()*4/5,getHeight()*4/5),paint);
     }
 
     @Override
@@ -31,15 +26,12 @@ public class TriangleSkewSpinIndicator extends BaseIndicatorController {
         List<Animator> animators=new ArrayList<Animator>();
         PropertyValuesHolder rotation5=PropertyValuesHolder.ofFloat("rotationX",0,180,180,0,0);
         PropertyValuesHolder rotation6=PropertyValuesHolder.ofFloat("rotationY",0,0,180,180,0);
-        
         ObjectAnimator animator=ObjectAnimator.ofPropertyValuesHolder(getTarget(), rotation6,rotation5);
         animator.setInterpolator(new LinearInterpolator());
         animator.setRepeatCount(-1);
         animator.setDuration(2500);
         animator.start();
-
         animators.add(animator);
         return animators;
     }
-
 }

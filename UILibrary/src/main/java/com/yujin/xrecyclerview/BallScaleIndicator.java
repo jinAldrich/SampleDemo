@@ -1,4 +1,4 @@
-package com.yujin.xrecyclerview.progressindicator.indicator;
+package com.yujin.xrecyclerview;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
@@ -12,14 +12,18 @@ import java.util.List;
 /**
  * Created by Jack on 2015/10/19.
  */
-public class BallScaleRippleIndicator extends BallScaleIndicator {
+public class BallScaleIndicator extends BaseIndicatorController {
 
+    float scale=1;
+    int alpha=255;
 
     @Override
     public void draw(Canvas canvas, Paint paint) {
-        paint.setStyle(Paint.Style.STROKE);
-        paint.setStrokeWidth(3);
-        super.draw(canvas, paint);
+        float circleSpacing=4;
+        paint.setAlpha(alpha);
+        canvas.scale(scale,scale,getWidth()/2,getHeight()/2);
+        paint.setAlpha(alpha);
+        canvas.drawCircle(getWidth()/2,getHeight()/2,getWidth()/2-circleSpacing,paint);
     }
 
     @Override
@@ -38,7 +42,7 @@ public class BallScaleRippleIndicator extends BallScaleIndicator {
         });
         scaleAnim.start();
 
-        ValueAnimator alphaAnim=ValueAnimator.ofInt(0, 255);
+        ValueAnimator alphaAnim=ValueAnimator.ofInt(255, 0);
         alphaAnim.setInterpolator(new LinearInterpolator());
         alphaAnim.setDuration(1000);
         alphaAnim.setRepeatCount(-1);
@@ -50,10 +54,10 @@ public class BallScaleRippleIndicator extends BallScaleIndicator {
             }
         });
         alphaAnim.start();
-
         animators.add(scaleAnim);
         animators.add(alphaAnim);
         return animators;
     }
+
 
 }

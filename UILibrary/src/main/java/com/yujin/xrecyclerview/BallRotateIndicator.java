@@ -1,4 +1,4 @@
-package com.yujin.xrecyclerview.progressindicator.indicator;
+package com.yujin.xrecyclerview;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by Jack on 2015/10/17.
  */
-public class BallRotateIndicator extends BaseIndicatorController{
+public class BallRotateIndicator extends BaseIndicatorController {
 
     float scaleFloat=0.5f;
 

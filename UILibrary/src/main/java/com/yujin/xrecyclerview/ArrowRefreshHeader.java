@@ -18,7 +18,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.yujin.uilibrary.R;
-import com.yujin.xrecyclerview.progressindicator.AVLoadingIndicatorView;
 
 public class ArrowRefreshHeader extends LinearLayout implements BaseRefreshHeader{
 	private LinearLayout mContainer;
@@ -107,6 +106,8 @@ public class ArrowRefreshHeader extends LinearLayout implements BaseRefreshHeade
     }
 
 	public void setState(int state) {
+        Exception e = new Exception("yujin");
+        e.printStackTrace();
 		if (state == mState) return ;
 
 		if (state == STATE_REFRESHING) {	// 显示进度
@@ -116,12 +117,18 @@ public class ArrowRefreshHeader extends LinearLayout implements BaseRefreshHeade
 		} else if(state == STATE_DONE) {
             mArrowImageView.setVisibility(View.INVISIBLE);
             mProgressBar.setVisibility(View.INVISIBLE);
-        } else {	// 显示箭头图片
+        } else if (state == STATE_NORMAL){	// 显示箭头图片
 			mArrowImageView.setVisibility(View.VISIBLE);
 			mProgressBar.setVisibility(View.INVISIBLE);
-		}
-		
-		switch(state){
+		} else if (state == STATE_RELEASE_TO_REFRESH) {
+            mArrowImageView.setVisibility(View.VISIBLE);
+            mProgressBar.setVisibility(View.INVISIBLE);
+        } else {
+            mArrowImageView.setVisibility(View.INVISIBLE);
+            mProgressBar.setVisibility(View.INVISIBLE);
+        }
+
+        switch(state){
             case STATE_NORMAL:
                 if (mState == STATE_RELEASE_TO_REFRESH) {
                     mArrowImageView.startAnimation(mRotateDownAnim);
@@ -129,6 +136,7 @@ public class ArrowRefreshHeader extends LinearLayout implements BaseRefreshHeade
                 if (mState == STATE_REFRESHING) {
                     mArrowImageView.clearAnimation();
                 }
+
                 mStatusTextView.setText(R.string.listview_header_hint_normal);
                 break;
             case STATE_RELEASE_TO_REFRESH:
@@ -158,26 +166,30 @@ public class ArrowRefreshHeader extends LinearLayout implements BaseRefreshHeade
 	public void refreshComplate(){
         mHeaderTimeView.setText(friendlyTime(new Date()));
         setState(STATE_DONE);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                smoothScrollTo(0);
+            }
+        }, 500);
+
         new Handler().postDelayed(new Runnable(){
             public void run() {
                 reset();
             }
-        }, 500);
+        }, 1000);
 	}
 
 	public void setVisiableHeight(int height) {
-		if (height < 0)
-			height = 0;
-		LayoutParams lp = (LayoutParams) mContainer
-				.getLayoutParams();
+		if (height < 0) height = 0;
+		LayoutParams lp = (LayoutParams) mContainer.getLayoutParams();
 		lp.height = height;
 		mContainer.setLayoutParams(lp);
 	}
 
 	public int getVisiableHeight() {
         int height = 0;
-        LayoutParams lp = (LayoutParams) mContainer
-                .getLayoutParams();
+        LayoutParams lp = (LayoutParams) mContainer.getLayoutParams();
         height = lp.height;
 		return height;
 	}
@@ -189,7 +201,7 @@ public class ArrowRefreshHeader extends LinearLayout implements BaseRefreshHeade
             if (mState <= STATE_RELEASE_TO_REFRESH) { // 未处于刷新状态，更新箭头
                 if (getVisiableHeight() > mMeasuredHeight) {
                     setState(STATE_RELEASE_TO_REFRESH);
-                }else {
+                } else {
                     setState(STATE_NORMAL);
                 }
             }
@@ -222,7 +234,6 @@ public class ArrowRefreshHeader extends LinearLayout implements BaseRefreshHeade
     }
 
     public void reset() {
-        smoothScrollTo(0);
         setState(STATE_NORMAL);
     }
 
@@ -231,8 +242,7 @@ public class ArrowRefreshHeader extends LinearLayout implements BaseRefreshHeade
         animator.setDuration(300).start();
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
-            public void onAnimationUpdate(ValueAnimator animation)
-            {
+            public void onAnimationUpdate(ValueAnimator animation) {
                 setVisiableHeight((Integer) animation.getAnimatedValue());
             }
         });

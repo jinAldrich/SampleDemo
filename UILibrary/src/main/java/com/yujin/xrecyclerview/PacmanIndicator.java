@@ -1,4 +1,4 @@
-package com.yujin.xrecyclerview.progressindicator.indicator;
+package com.yujin.xrecyclerview;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Created by Jack on 2015/10/16.
  */
-public class PacmanIndicator extends BaseIndicatorController{
+public class PacmanIndicator extends BaseIndicatorController {
 
     private float translateX;
 

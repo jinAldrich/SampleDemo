@@ -1,9 +1,10 @@
-package com.yujin.xrecyclerview.progressindicator.indicator;
+package com.yujin.xrecyclerview;
 
 import android.animation.Animator;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.view.View;
+
 import java.util.List;
 
 /**

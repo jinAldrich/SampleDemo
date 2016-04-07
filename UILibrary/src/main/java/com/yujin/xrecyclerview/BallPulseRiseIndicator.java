@@ -1,4 +1,4 @@
-package com.yujin.xrecyclerview.progressindicator.indicator;
+package com.yujin.xrecyclerview;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Created by Jack on 2015/10/17.
  */
-public class BallPulseRiseIndicator extends BaseIndicatorController{
+public class BallPulseRiseIndicator extends BaseIndicatorController {
 
     @Override
     public void draw(Canvas canvas, Paint paint) {

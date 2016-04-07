@@ -1,4 +1,4 @@
-package com.yujin.xrecyclerview.progressindicator;
+package com.yujin.xrecyclerview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -10,35 +10,6 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.yujin.uilibrary.R;
-import com.yujin.xrecyclerview.progressindicator.indicator.BallBeatIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.BallClipRotateIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.BallClipRotateMultipleIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.BallClipRotatePulseIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.BallGridBeatIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.BallGridPulseIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.BallPulseIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.BallPulseRiseIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.BallPulseSyncIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.BallRotateIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.BallScaleIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.BallScaleMultipleIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.BallScaleRippleIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.BallScaleRippleMultipleIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.BallSpinFadeLoaderIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.BallTrianglePathIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.BallZigZagDeflectIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.BallZigZagIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.BaseIndicatorController;
-import com.yujin.xrecyclerview.progressindicator.indicator.CubeTransitionIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.LineScaleIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.LineScalePartyIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.LineScalePulseOutIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.LineScalePulseOutRapidIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.LineSpinFadeLoaderIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.PacmanIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.SemiCircleSpinIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.SquareSpinIndicator;
-import com.yujin.xrecyclerview.progressindicator.indicator.TriangleSkewSpinIndicator;
 
 
 /**

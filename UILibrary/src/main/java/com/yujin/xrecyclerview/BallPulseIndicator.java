@@ -1,37 +1,39 @@
-package com.yujin.xrecyclerview.progressindicator.indicator;
+package com.yujin.xrecyclerview;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.graphics.Canvas;
 import android.graphics.Paint;
-import android.graphics.RectF;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Jack on 2015/10/19.
+ * Created by Jack on 2015/10/16.
  */
-public class LineScalePartyIndicator extends BaseIndicatorController {
+public class BallPulseIndicator extends BaseIndicatorController {
 
     public static final float SCALE=1.0f;
 
-    float[] scaleFloats=new float[]{SCALE,
+    //scale x ,y
+    private float[] scaleFloats=new float[]{SCALE,
             SCALE,
-            SCALE,
-            SCALE,
-            SCALE,};
+            SCALE};
+
+
 
     @Override
     public void draw(Canvas canvas, Paint paint) {
-        float translateX=getWidth()/9;
-        float translateY=getHeight()/2;
-        for (int i = 0; i < 4; i++) {
+        float circleSpacing=4;
+        float radius=(Math.min(getWidth(),getHeight())-circleSpacing*2)/6;
+        float x = getWidth()/ 2-(radius*2+circleSpacing);
+        float y=getHeight() / 2;
+        for (int i = 0; i < 3; i++) {
             canvas.save();
-            canvas.translate((2 + i * 2) * translateX - translateX / 2, translateY);
+            float translateX=x+(radius*2)*i+circleSpacing*i;
+            canvas.translate(translateX, y);
             canvas.scale(scaleFloats[i], scaleFloats[i]);
-            RectF rectF=new RectF(-translateX/2,-getHeight()/2.5f,translateX/2,getHeight()/2.5f);
-            canvas.drawRoundRect(rectF,5,5,paint);
+            canvas.drawCircle(0, 0, radius, paint);
             canvas.restore();
         }
     }
@@ -39,19 +41,22 @@ public class LineScalePartyIndicator extends BaseIndicatorController {
     @Override
     public List<Animator> createAnimation() {
         List<Animator> animators=new ArrayList<Animator>();
-        long[] durations=new long[]{1260, 430, 1010, 730};
-        long[] delays=new long[]{770, 290, 280, 740};
-        for (int i = 0; i < 4; i++) {
+        int[] delays=new int[]{120,240,360};
+        for (int i = 0; i < 3; i++) {
             final int index=i;
-            ValueAnimator scaleAnim=ValueAnimator.ofFloat(1,0.4f,1);
-            scaleAnim.setDuration(durations[i]);
+            
+            ValueAnimator scaleAnim=ValueAnimator.ofFloat(1,0.3f,1);
+            
+            scaleAnim.setDuration(750);
             scaleAnim.setRepeatCount(-1);
             scaleAnim.setStartDelay(delays[i]);
+            
             scaleAnim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                 @Override
                 public void onAnimationUpdate(ValueAnimator animation) {
                     scaleFloats[index] = (Float) animation.getAnimatedValue();
                     postInvalidate();
+
                 }
             });
             scaleAnim.start();
@@ -59,6 +64,5 @@ public class LineScalePartyIndicator extends BaseIndicatorController {
         }
         return animators;
     }
-
 
 }
