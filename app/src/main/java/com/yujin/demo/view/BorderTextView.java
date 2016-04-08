@@ -19,8 +19,10 @@ import com.yujin.demo.R;
  * Created by yujin on 16/3/31.
  */
 public class BorderTextView extends TextView {
+    public static final String TAG = BorderTextView.class.getSimpleName();
+
     public static final float DEFAULT_STROKE_WIDTH = 1.0f;    // 默认边框宽度, 1dp
-    public static final float DEFAULT_CORNER_RADIUS = 7.0f;   // 默认圆角半径, 2dp
+    public static final float DEFAULT_CORNER_RADIUS = 10.0f;   // 默认圆角半径, 2dp
     public static final float DEFAULT_LR_PADDING = 6f;      // 默认左右内边距
     public static final float DEFAULT_TB_PADDING = 2f;      // 默认上下内边距
 
@@ -51,7 +53,6 @@ public class BorderTextView extends TextView {
                 DEFAULT_STROKE_WIDTH, displayMetrics);
         cornerRadius = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
                 DEFAULT_CORNER_RADIUS, displayMetrics);
-
         // 读取属性值
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.BorderTextView);
         strokeWidth = ta.getDimensionPixelSize(R.styleable.BorderTextView_strokeWidth, strokeWidth);
@@ -60,7 +61,6 @@ public class BorderTextView extends TextView {
         mFollowTextColor = ta.getBoolean(R.styleable.BorderTextView_followTextColor, true);
         ta.recycle();
         mRectF = new RectF();
-
         // 边框默认颜色与文字颜色一致
 //        if (strokeColor == Color.TRANSPARENT)
 //            strokeColor = getCurrentTextColor();
@@ -96,8 +96,31 @@ public class BorderTextView extends TextView {
         mRectF.left = mRectF.top = 0.5f * strokeWidth;
         mRectF.right = getMeasuredWidth() - strokeWidth;
         mRectF.bottom = getMeasuredHeight() - strokeWidth;
-        Log.i("yujin", mRectF.toString());
         canvas.drawRoundRect(mRectF, cornerRadius, cornerRadius, mPaint);
+    }
+
+    public int getStrokeColor() {
+        return strokeColor;
+    }
+
+    public void setStrokeColor(int strokeColor) {
+        this.strokeColor = strokeColor;
+    }
+
+    public int getStrokeWidth() {
+        return strokeWidth;
+    }
+
+    public void setStrokeWidth(int strokeWidth) {
+        this.strokeWidth = strokeWidth;
+    }
+
+    public int getCornerRadius() {
+        return cornerRadius;
+    }
+
+    public void setCornerRadius(int cornerRadius) {
+        this.cornerRadius = cornerRadius;
     }
 
     /**

@@ -126,6 +126,7 @@ public class DarenDetail extends BaseActivity implements HeaderView{
         BorderTextView textView1 = new BorderTextView(this);
         textView1.setText("百代游1");
         textView1.setStyle(R.style.BorderTextView);
+        textView1.setCornerRadius(20);
 
         final BorderTextView textView2 = new BorderTextView(this);
         textView2.setText("百代游2");
