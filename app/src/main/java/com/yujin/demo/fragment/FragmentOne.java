@@ -25,7 +25,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import xrecyclerview.DividerItemDecoration;
 
-public class FragmentOne extends BaseFragment implements HeaderView, BodyView {
+public class FragmentOne extends BaseFragment implements BodyView {
     public static final String TAG = FragmentOne.class.getSimpleName();
 
     private static FragmentOne instance = null;
@@ -42,7 +42,8 @@ public class FragmentOne extends BaseFragment implements HeaderView, BodyView {
         return instance;
     }
 
-    //private FragmentOne(){}
+    public  FragmentOne(){}
+
     Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -114,10 +115,6 @@ public class FragmentOne extends BaseFragment implements HeaderView, BodyView {
         return view;
     }
 
-    public FragmentOne() {
-        super();
-    }
-
     @Override
     public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
         super.onViewStateRestored(savedInstanceState);
@@ -180,20 +177,10 @@ public class FragmentOne extends BaseFragment implements HeaderView, BodyView {
     }
 
     @Override
-    public void loadData(ArrayList<DetailBodyItemBean> datas) {
+    public void loadBodyData(ArrayList<DetailBodyItemBean> datas) {
         Message msg = mHandler.obtainMessage();
         msg.obj = datas;
         mHandler.sendMessage(msg);
-
-    }
-
-    @Override
-    public void showDefaultData() {
-
-    }
-
-    @Override
-    public void addData() {
 
     }
 

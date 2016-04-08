@@ -63,7 +63,7 @@ public class DetailPresenterImpl implements DetailPresenter, DetailModelImpl.onL
         for (int i = 0; i < 10; i++) {
             list.add(bodyItemBean);
         }
-        mBodyView.loadData(list);
+        mBodyView.loadBodyData(list);
     }
 
     @Override

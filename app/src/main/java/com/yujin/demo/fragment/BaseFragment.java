@@ -5,6 +5,9 @@ import android.support.v4.app.Fragment;
 
 /**
  * Created by yujin on 16/4/6.
+ * Fragment的基类,实现了进栈和退栈Fragment状态的保存与恢复
+ * 重写onSaveState和onRestoreState实现状态的保存与恢复
+ *
  */
 public class BaseFragment extends Fragment {
     Bundle savedState;

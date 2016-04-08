@@ -21,7 +21,9 @@ import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
 import android.transition.Slide;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
@@ -35,20 +37,23 @@ import com.yujin.demo.fragment.FragmentThree;
 import com.yujin.demo.fragment.FragmentTwo;
 import com.yujin.demo.utils.BitmapUtils;
 import com.yujin.demo.utils.CircleDrawable;
+import com.yujin.demo.view.BorderTextView;
 import com.yujin.demo.view.CircleImageView;
+import com.yujin.demo.view.HeaderView;
+import com.yujin.demo.view.MyLinearLayout;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class DarenDetail extends BaseActivity {
+public class DarenDetail extends BaseActivity implements HeaderView{
     public static final String TAG = DarenDetail.class.getSimpleName();
     @Bind(R.id.civ_head)
     CircleImageView civHead;
     @Bind(R.id.ll_header_networkname)
     TextView llHeaderNetworkname;
     @Bind(R.id.ll_header_impression)
-    LinearLayout llHeaderImpression;
+    MyLinearLayout llHeaderImpression;
     @Bind(R.id.ll_header_motto)
     TextView llHeaderMotto;
     @Bind(R.id.head_bg)
@@ -109,6 +114,41 @@ public class DarenDetail extends BaseActivity {
                 float percentage = (float) Math.abs(verticalOffset) / (float) maxScroll;
                 Log.i(TAG, "percentage: " + percentage);
                 //llToolbarCenter.setAlpha(percentage);
+            }
+        });
+
+        //动态添加TextView
+        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams)llHeaderImpression.getLayoutParams();
+        params.setMargins(0,10,0,0);
+        params.gravity = Gravity.CENTER;
+        llHeaderImpression.setLayoutParams(params);
+        //---
+        BorderTextView textView1 = new BorderTextView(this);
+        textView1.setText("百代游1");
+        textView1.setStyle(R.style.BorderTextView);
+
+        final BorderTextView textView2 = new BorderTextView(this);
+        textView2.setText("百代游2");
+        textView2.setStyle(R.style.BorderTextView);
+        BorderTextView textView3 = new BorderTextView(this);
+        textView3.setText("百代旅游游3");
+        textView3.setStyle(R.style.BorderTextView);
+        BorderTextView textView4 = new BorderTextView(this);
+        textView4.setText("百代4");
+        textView4.setStyle(R.style.BorderTextView);
+        BorderTextView textView5 = new BorderTextView(this);
+        textView5.setText("百代旅游55");
+        textView5.setStyle(R.style.BorderTextView);
+        llHeaderImpression.addView(textView1);
+        llHeaderImpression.addView(textView2);
+        llHeaderImpression.addView(textView3);
+//        llHeaderImpression.addView(textView4);
+        llHeaderImpression.addView(textView5);
+
+        textView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                llHeaderImpression.removeView(textView2);
             }
         });
     }
@@ -186,6 +226,16 @@ public class DarenDetail extends BaseActivity {
         if (fragmentThree.mRecyclerView != null) {
             fragmentThree.mRecyclerView.setPullRefreshEnabled(refresh);
         }
+    }
+
+    @Override
+    public void showDefaultData() {
+
+    }
+
+    @Override
+    public void loadHeaderData() {
+
     }
 
     /**

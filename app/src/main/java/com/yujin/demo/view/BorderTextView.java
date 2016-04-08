@@ -9,6 +9,7 @@ import android.graphics.RectF;
 import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.util.TypedValue;
 import android.widget.TextView;
 
@@ -30,18 +31,20 @@ public class BorderTextView extends TextView {
 
     private Paint mPaint = new Paint();     // 画边框所使用画笔对象
     private RectF mRectF;                   // 画边框要使用的矩形
-
+    private Context mContext;
     public BorderTextView(Context context) {
         this(context, null);
+        mContext = context;
     }
 
     public BorderTextView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
+        mContext = context;
     }
 
     public BorderTextView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-
+        mContext = context;
         // 将DIP单位默认值转为PX
         DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
         strokeWidth = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
@@ -56,7 +59,6 @@ public class BorderTextView extends TextView {
         strokeColor = ta.getColor(R.styleable.BorderTextView_strokeColor, Color.RED);
         mFollowTextColor = ta.getBoolean(R.styleable.BorderTextView_followTextColor, true);
         ta.recycle();
-
         mRectF = new RectF();
 
         // 边框默认颜色与文字颜色一致
@@ -94,6 +96,15 @@ public class BorderTextView extends TextView {
         mRectF.left = mRectF.top = 0.5f * strokeWidth;
         mRectF.right = getMeasuredWidth() - strokeWidth;
         mRectF.bottom = getMeasuredHeight() - strokeWidth;
+        Log.i("yujin", mRectF.toString());
         canvas.drawRoundRect(mRectF, cornerRadius, cornerRadius, mPaint);
+    }
+
+    /**
+     *
+     * @param style
+     */
+    public void setStyle(int style) {
+        this.setTextAppearance(mContext, style);
     }
 }

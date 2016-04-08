@@ -4,5 +4,29 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
     </style>
+    <style name="BorderTextView">
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:textColor">#FF8900</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+        <!--followTextColor是自定义属性,在attr.xml文件中定义-->
+        <item name="followTextColor">true</item>
+        <item name="strokeColor">#FF8900</item>
+    </style>
+    <style name="MyLinearLayout">
+        <item name="android:background">#BFEFFF</item>
 
+    </style>
 </resources>
+
+<!--
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="开心果"
+            android:textColor="#FF8900"
+            android:textSize="12sp"
+            myAttr:followTextColor="true"
+
+-->

@@ -12,5 +12,5 @@ public interface BodyView extends DetailView {
 
     void showLoadFailedMsg();
     void showProgress();
-    void loadData(ArrayList<DetailBodyItemBean> datas);
+    void loadBodyData(ArrayList<DetailBodyItemBean> datas);
 }
