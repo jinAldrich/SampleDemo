@@ -18,6 +18,12 @@
         <item name="android:background">#BFEFFF</item>
 
     </style>
+
+    <style name="main_title_bar_style">
+        <item name="android:background">@drawable/bg_titlebar_main</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">44dip</item>
+    </style>
 </resources>
 
 <!--

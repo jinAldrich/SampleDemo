@@ -19,10 +19,21 @@ public class MyLinearLayout extends LinearLayout {
     public static final String TAG = MyLinearLayout.class.getSimpleName();
 
     private Context mContext;
-    private int mCellWidth = 150;
-    private int mCellHeight = 50;
+
+    public boolean isCenter() {
+        return isCenter;
+    }
+
+    public void setCenter(boolean center) {
+        isCenter = center;
+    }
+
     /**
-     * 子View之间的左右间距
+     * 每行子View是否居中显示
+     */
+    private boolean isCenter = true;
+    /**
+     * 子View之间的左右上下的间距,可以理解为Margin,左右上下都一个值
      */
     private int span = 10;
     public MyLinearLayout(Context context) {
@@ -37,14 +48,6 @@ public class MyLinearLayout extends LinearLayout {
     public MyLinearLayout(Context context, AttributeSet attrs, int defineStyle) {
         super(context, attrs, defineStyle);
 
-    }
-
-    public void setmCellHeight(int mCellHeight) {
-        this.mCellHeight = mCellHeight;
-    }
-
-    public void setmCellWidth(int mCellWidth) {
-        this.mCellWidth = mCellWidth;
     }
 
     public void setSpan(int span) {
@@ -65,16 +68,17 @@ public class MyLinearLayout extends LinearLayout {
         int containerWidth = getMeasuredWidth();
         int containerHeight = getMeasuredHeight();
         int count = getChildCount();
-        int x = (containerWidth - newLine(count))/2; //x轴起始坐标
+        int x = 0; //x轴起始坐标
         int y = 0; //y轴起始坐标
         int i = 0; //
+        if (isCenter) {
+            x = (containerWidth - newLine(count))/2 + span; //第一行的x轴起始坐标
+        }
         for (int j = 0; j < count; j++) {
             final View childView = getChildAt(j);
             // 获取子控件Child的宽高
             int childWidth = childView.getMeasuredWidth();
             int childHeight = childView.getMeasuredHeight();
-            int a = newLine(j);
-            Log.i(TAG, "a:" + a);
             int left = x;
             int top = y;
             int right = left + childWidth;
@@ -86,8 +90,10 @@ public class MyLinearLayout extends LinearLayout {
             Log.i(TAG, (right + span) + ">=" + containerWidth);
             if ((right + childWidth) >= containerWidth) {
                 i = 0;
-                //x = 0;
-                x = (containerWidth - newLine(count - j))/2;
+                x = 0;
+                if (isCenter) {
+                    x = (containerWidth - newLine(count - j))/2;//第一行之后,第二行到第N行的x轴起始坐标
+                }
                 //y += cellHeight;
                 y += childHeight + span;
             } else {
@@ -107,17 +113,24 @@ public class MyLinearLayout extends LinearLayout {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         // 记录ViewGroup中Child的总个数
         int count = getChildCount();
+        int parentWidth = 0;
+        int parentHeight = 0;
         // 设置子空间Child的宽高
         for (int i = 0; i < count; i++) {
             View childView = getChildAt(i);
             childView.measure(childView.getWidth(), childView.getHeight());
+            parentWidth += childView.getMeasuredWidth();
+            parentHeight += childView.getMeasuredHeight();
         }
+
         // 设置容器控件所占区域大小
         // 注意setMeasuredDimension和resolveSize的用法
 //        setMeasuredDimension(resolveSize(mCellWidth * count, widthMeasureSpec),
 //                resolveSize(mCellHeight * count, heightMeasureSpec));
+//        setMeasuredDimension(resolveSize(parentWidth, widthMeasureSpec),
+//                resolveSize(parentHeight, heightMeasureSpec));
         setMeasuredDimension(widthMeasureSpec, heightMeasureSpec);
-
+        //setMeasuredDimension(parentWidth, parentHeight);
         // 不需要调用父类的方法
         // super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
@@ -152,7 +165,7 @@ public class MyLinearLayout extends LinearLayout {
         for (int i = 0; i < count; i++) {
             View view = getChildAt(i);
             int w = view.getMeasuredWidth();
-            width += w + span;
+            width += w + span*2;
             if (width >= parentWidth) {
                 return  width - w;
             }

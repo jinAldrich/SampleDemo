@@ -4,8 +4,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.ColorMatrix;
-import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -17,15 +15,11 @@ import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPager;
-import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
 import android.transition.Slide;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.animation.AnimationUtils;
-import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -58,20 +52,20 @@ public class DarenDetail extends BaseActivity implements HeaderView{
     TextView llHeaderMotto;
     @Bind(R.id.head_bg)
     LinearLayout headBg;
-    @Bind(R.id.iv_toolbar_back)
-    ImageView ivToolbarBack;
-    @Bind(R.id.ll_toolbar_left)
-    LinearLayout llToolbarLeft;
-    @Bind(R.id.iv_toolbar_icon)
-    CircleImageView ivToolbarIcon;
-    @Bind(R.id.tv_toolbar_title)
-    TextView tvToolbarTitle;
-    @Bind(R.id.ll_toolbar_center)
-    LinearLayout llToolbarCenter;
-    @Bind(R.id.ll_toolbar_right)
-    LinearLayout llToolbarRight;
-    @Bind(R.id.toolbar)
-    Toolbar mToolbar;
+//    @Bind(R.id.iv_toolbar_back)
+//    ImageView ivToolbarBack;
+//    @Bind(R.id.ll_toolbar_left)
+//    LinearLayout llToolbarLeft;
+//    @Bind(R.id.iv_toolbar_icon)
+//    CircleImageView ivToolbarIcon;
+//    @Bind(R.id.tv_toolbar_title)
+//    TextView tvToolbarTitle;
+//    @Bind(R.id.ll_toolbar_center)
+//    LinearLayout llToolbarCenter;
+//    @Bind(R.id.ll_toolbar_right)
+//    LinearLayout llToolbarRight;
+//    @Bind(R.id.toolbar)
+//    Toolbar mToolbar;
     @Bind(R.id.collapsing_toolbar)
     CollapsingToolbarLayout mCollapsingToolbar;
     @Bind(R.id.app_bar_layout)
@@ -95,8 +89,8 @@ public class DarenDetail extends BaseActivity implements HeaderView{
         ButterKnife.bind(this);
         initViews();
 
-        mToolbar.setTitleTextColor(Color.WHITE);//设置ToolBar的titl颜色
-        setSupportActionBar(mToolbar);
+        //mToolbar.setTitleTextColor(Color.WHITE);//设置ToolBar的titl颜色
+        //setSupportActionBar(mToolbar);
 
         ViewCompat.setTransitionName(mAppBarLayout, "");
         supportPostponeEnterTransition();
@@ -124,12 +118,12 @@ public class DarenDetail extends BaseActivity implements HeaderView{
         llHeaderImpression.setLayoutParams(params);
         //---
         BorderTextView textView1 = new BorderTextView(this);
-        textView1.setText("百代游1");
+        textView1.setText("百代dd游1");
         textView1.setStyle(R.style.BorderTextView);
-        textView1.setCornerRadius(20);
+        //textView1.setCornerRadius(20);
 
         final BorderTextView textView2 = new BorderTextView(this);
-        textView2.setText("百代游2");
+        textView2.setText("百代代游2");
         textView2.setStyle(R.style.BorderTextView);
         BorderTextView textView3 = new BorderTextView(this);
         textView3.setText("百代旅游游3");
@@ -143,8 +137,14 @@ public class DarenDetail extends BaseActivity implements HeaderView{
         llHeaderImpression.addView(textView1);
         llHeaderImpression.addView(textView2);
         llHeaderImpression.addView(textView3);
-//        llHeaderImpression.addView(textView4);
+        llHeaderImpression.addView(textView4);
         llHeaderImpression.addView(textView5);
+//        for (int i = 0; i < 10; i++) {
+//            BorderTextView textView6 = new BorderTextView(this);
+//            textView6.setText("百代旅");
+//            textView6.setStyle(R.style.BorderTextView);
+//            llHeaderImpression.addView(textView6);
+//        }
 
         textView2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -182,16 +182,16 @@ public class DarenDetail extends BaseActivity implements HeaderView{
         }
     }
 
-    @OnClick({R.id.iv_toolbar_back, R.id.iv_toolbar_icon})
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.iv_toolbar_back:
-                finish();
-                break;
-            case R.id.iv_toolbar_icon:
-                break;
-        }
-    }
+//    @OnClick({R.id.iv_toolbar_back, R.id.iv_toolbar_icon})
+//    public void onClick(View view) {
+//        switch (view.getId()) {
+//            case R.id.iv_toolbar_back:
+//                finish();
+//                break;
+//            case R.id.iv_toolbar_icon:
+//                break;
+//        }
+//    }
 
     /**
      * 模糊背景处理

@@ -1,0 +1,77 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/navigation_bar"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        style="@style/main_title_bar_style">
+
+        <FrameLayout
+            android:id="@+id/navi_head_container"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip">
+
+            <ImageView
+                android:id="@+id/navi_head"
+                android:layout_width="28dip"
+                android:layout_height="28dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg_head"
+                android:contentDescription="@string/app_name"
+                android:padding="2.0dip"
+                android:scaleType="fitXY"
+                android:src="@mipmap/default_round_head" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/navi_more"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12.0dip"
+            android:contentDescription="@string/app_name"
+            android:gravity="center"
+            android:scaleType="centerInside"
+            android:src="@mipmap/right_drawer_normal" />
+
+        <RelativeLayout
+            android:id="@+id/navi_title_click_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:paddingLeft="13.0dip">
+
+            <FrameLayout
+                android:id="@+id/navi_title_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/navi_title_recent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/app_name"
+                     />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/top_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/navi_title_parent"
+                android:contentDescription="@string/app_name"
+                android:padding="3.0dip"
+                android:src="@mipmap/refreshicon_titlebar" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

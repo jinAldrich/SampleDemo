@@ -18,7 +18,7 @@
             app:contentScrim="@null"
             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
             <include layout="@layout/header_layout" />
-            <include layout="@layout/toolbar" />
+            <!--<include layout="@layout/toolbar" />-->
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 

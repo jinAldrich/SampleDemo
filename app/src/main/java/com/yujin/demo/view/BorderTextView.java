@@ -2,6 +2,8 @@ package com.yujin.demo.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -91,12 +93,13 @@ public class BorderTextView extends TextView {
         if (mFollowTextColor && strokeColor != getCurrentTextColor())
             strokeColor = getCurrentTextColor();
         mPaint.setColor(strokeColor);
-
         // 画空心圆角矩形
+        Bitmap bitmap = BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.imag_market_delete);
         mRectF.left = mRectF.top = 0.5f * strokeWidth;
         mRectF.right = getMeasuredWidth() - strokeWidth;
         mRectF.bottom = getMeasuredHeight() - strokeWidth;
         canvas.drawRoundRect(mRectF, cornerRadius, cornerRadius, mPaint);
+
     }
 
     public int getStrokeColor() {
