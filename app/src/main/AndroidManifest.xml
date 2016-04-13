@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".BaseActivity"
-            android:launchMode="singleInstance"></activity>
+            android:launchMode="singleInstance" />
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,14 +18,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".activity.DarenDetail"
-            android:launchMode="singleInstance"/>
-        <activity android:name="xrecyclerview.MainActivity"></activity>
+        <activity
+            android:name=".activity.DarenDetail"
+            android:launchMode="singleInstance" />
+        <activity android:name="xrecyclerview.MainActivity" />
         <activity android:name="xrecyclerview.LinearActivity" />
         <activity android:name="xrecyclerview.GridActivity" />
         <activity android:name="xrecyclerview.StaggeredGridActivity" />
+        <activity android:name=".activity.DarenDetail2"></activity>
 
+        <!--下拉放大Header演示-->
+        <activity android:name=".zoom.activity.MainActivity"/>
+        <activity android:name=".zoom.activity.PullGridViewActivity"/>
+        <activity android:name=".zoom.activity.PullRecyclerViewActivity"/>
+        <activity android:name=".zoom.activity.PullListViewActivity"/>
+        <activity android:name=".zoom.activity.PullScrollViewActivity"/>
+        <activity android:name=".zoom.activity.PullViewActivity"/>
+        <activity android:name=".zoom.activity.PullViewGroupActivity"/>
+        <activity android:name=".zoom.activity.PullWebViewActivity"/>
     </application>
 
 </manifest>

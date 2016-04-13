@@ -10,4 +10,5 @@
         <attr name="strokeColor" format="color"/>
         <attr name="followTextColor" format="boolean"/>
     </declare-styleable>
+
 </resources>

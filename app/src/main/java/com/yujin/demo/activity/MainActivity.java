@@ -52,6 +52,9 @@ public class MainActivity extends BaseActivity {
             case R.id.button4:
                 break;
             case R.id.button5:
+                Intent intent5 = new Intent();
+                intent5.setClass(this, com.yujin.demo.zoom.activity.MainActivity.class);
+                startActivity(intent5);
                 break;
         }
     }

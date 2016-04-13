@@ -51,7 +51,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="80dp"
-        android:text="New Button"
+        android:text="下拉放大头像"
         android:id="@+id/button5"
         android:layout_below="@+id/button4"
         android:layout_alignStart="@+id/button4"

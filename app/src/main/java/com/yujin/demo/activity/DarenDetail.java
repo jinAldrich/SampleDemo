@@ -182,16 +182,16 @@ public class DarenDetail extends BaseActivity implements HeaderView{
         }
     }
 
-//    @OnClick({R.id.iv_toolbar_back, R.id.iv_toolbar_icon})
-//    public void onClick(View view) {
-//        switch (view.getId()) {
-//            case R.id.iv_toolbar_back:
-//                finish();
-//                break;
-//            case R.id.iv_toolbar_icon:
-//                break;
-//        }
-//    }
+    @OnClick({R.id.head_bg})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.head_bg:
+                ViewCompat.offsetTopAndBottom(headBg, 5);
+                break;
+            case R.id.iv_toolbar_icon:
+                break;
+        }
+    }
 
     /**
      * 模糊背景处理
