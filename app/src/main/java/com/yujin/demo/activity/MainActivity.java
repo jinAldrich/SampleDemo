@@ -25,7 +25,8 @@ public class MainActivity extends BaseActivity {
     Button button4;
     @Bind(R.id.button5)
     Button button5;
-
+    @Bind(R.id.button6)
+    Button button6;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +35,7 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.button, R.id.button2, R.id.button3, R.id.button4, R.id.button5})
+    @OnClick({R.id.button, R.id.button2, R.id.button3, R.id.button4, R.id.button5, R.id.button6})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button:
@@ -55,6 +56,11 @@ public class MainActivity extends BaseActivity {
                 Intent intent5 = new Intent();
                 intent5.setClass(this, com.yujin.demo.zoom.activity.MainActivity.class);
                 startActivity(intent5);
+                break;
+            case R.id.button6:
+                Intent intent6 = new Intent();
+                intent6.setClass(this, com.yujin.demo.activity.AutoSlideViewPagerActivity.class);
+                startActivity(intent6);
                 break;
         }
     }
