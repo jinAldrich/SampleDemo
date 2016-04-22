@@ -42,7 +42,6 @@
             android:id="@+id/icon"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:background="@drawable/new_homepage_anshan_bg"
             android:layout_alignParentLeft="true" />
         <LinearLayout
             android:layout_width="match_parent"

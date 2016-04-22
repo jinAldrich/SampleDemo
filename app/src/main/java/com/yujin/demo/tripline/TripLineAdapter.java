@@ -7,8 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.baidai.baidaitravel.R;
-import com.baidai.baidaitravel.ui.base.adapter.BaseRecyclerAdapter;
 
 import java.util.ArrayList;
 

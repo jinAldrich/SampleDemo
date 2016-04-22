@@ -24,7 +24,7 @@ import java.util.zip.ZipOutputStream;
 
 /**
  * 文件操作工具类
- * Created by wangchunlei on 4/6/16.
+ * Created by yujin on 4/22/16.
  */
 public class FileUtils {
     /**

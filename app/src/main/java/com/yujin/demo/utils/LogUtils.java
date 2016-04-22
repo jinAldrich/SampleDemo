@@ -1,14 +1,17 @@
 package com.yujin.demo.utils;
 
-import com.baidai.baidaitravel.BuildConfig;
 import com.orhanobut.logger.Logger;
 
 /**
+ *
  * 日志管理
+ * 比原生Log
+ * @author yujin 4/22/16
+ *
  */
 public class LogUtils {
 
-    private static final String APP_TAG = "baidai";
+    private static final String APP_TAG = "yujin";
 
     public LogUtils() {
         Logger.init(APP_TAG);

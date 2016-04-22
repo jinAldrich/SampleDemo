@@ -9,8 +9,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.baidai.baidaitravel.R;
-import com.baidai.baidaitravel.widget.AutoSlideViewpagerAndPoint;
+import com.yujin.demo.R;
 
 import java.util.ArrayList;
 
