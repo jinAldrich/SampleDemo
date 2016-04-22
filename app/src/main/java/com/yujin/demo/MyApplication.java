@@ -1,6 +1,7 @@
 package com.yujin.demo;
 
 import android.app.Application;
+import android.content.Context;
 import android.content.res.AssetManager;
 import android.content.res.Configuration;
 import android.net.Uri;
@@ -14,10 +15,14 @@ public class MyApplication extends Application {
     public static final String TAG = MyApplication.class.getSimpleName();
 
     public static boolean Debug = true;
-
+    /**
+     * 整个应用程序的上下文
+     */
+    public static Context mContext;
     @Override
     public void onCreate() {
         super.onCreate();
+        mContext = getApplicationContext();
 
     }
 

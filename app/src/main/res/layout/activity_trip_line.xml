@@ -3,13 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.AutoSlideViewPagerActivity">
+    android:orientation="vertical"
+    tools:context="com.yujin.demo.tripline.TripLineActivity">
 
-    <LinearLayout
-        android:id="@+id/autoViewPagerContainer"
+    <com.baidai.baidaitravel.widget.xrecycleview.XRecyclerView
+        android:id="@+id/rv_list_tripline"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"></LinearLayout>
+        android:layout_height="wrap_content" />
 
+    <include layout="@layout/empty_view" />
 
 </RelativeLayout>

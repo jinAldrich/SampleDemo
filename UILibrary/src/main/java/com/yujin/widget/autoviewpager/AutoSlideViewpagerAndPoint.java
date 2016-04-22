@@ -28,7 +28,6 @@ import android.widget.Scroller;
 
 
 /**
- * @author 张小康 E-mail:wudkj@163.com
  * @version 3.1
  *          <p>
  *          创建时间：2015-1-7 下午15:58:16
@@ -334,12 +333,12 @@ public class AutoSlideViewpagerAndPoint {
 		this.imageViews = imageViews;
 		this.context = context;
 	}
-	private Zhang_ViewPager viewPager;
+	private CustomerViewPager viewPager;
 	/**
 	 * 程序入口,在此之前请对圆点进行设置，并将返回的FrameLayout加入到你要显示的页面的布局中
 	 */
 	public FrameLayout setViewPagerAndPoint() {
-		viewPager = new Zhang_ViewPager(context);
+		viewPager = new CustomerViewPager(context);
 		LinearLayout vpl = setViewPager(viewPager);
 		LinearLayout dotl = setDots(viewPager);
 		startInit(viewPager);
@@ -363,7 +362,7 @@ public class AutoSlideViewpagerAndPoint {
 		return main_frame;
 	}
 
-	private void startInit(Zhang_ViewPager viewPager) {
+	private void startInit(CustomerViewPager viewPager) {
 		adapter = new MyVPAdapter(imageViews);
 		viewPager.setAdapter(adapter);
 		viewPager.setCurrentItem(imageViews.size() * 10000);
@@ -384,7 +383,7 @@ public class AutoSlideViewpagerAndPoint {
 		this.dotHeight = dotHeight;
 	}
 
-	private LinearLayout setDots(Zhang_ViewPager viewPager) {
+	private LinearLayout setDots(CustomerViewPager viewPager) {
 		setVPonChange(viewPager);
 		dots = new View[imageViews.size()];
 		LinearLayout dot_line = setLinearLayout();
@@ -438,7 +437,7 @@ public class AutoSlideViewpagerAndPoint {
 
 	private boolean isContinue = true;
 
-	private void setVPonChange(final Zhang_ViewPager viewPager) {
+	private void setVPonChange(final CustomerViewPager viewPager) {
 		viewPager.setOnPageChangeListener(new OnPageChangeListener() {
 			@Override
 			public void onPageSelected(final int arg0) {
@@ -513,7 +512,7 @@ public class AutoSlideViewpagerAndPoint {
 		return dot_line;
 	}
 
-	private LinearLayout setViewPager(Zhang_ViewPager viewPager) {
+	private LinearLayout setViewPager(CustomerViewPager viewPager) {
 		LinearLayout line = new LinearLayout(context);
 		LayoutParams params = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
 		line.addView(viewPager, params);
@@ -737,7 +736,7 @@ class ViewPagerScroller extends Scroller {
 }
 
 /**
- * @author wudkj滑动的动画
+ * @author 滑动的动画
  * 
  */
 class ZoomOutPageTransformer implements PageTransformer {
@@ -835,18 +834,18 @@ class MyVPAdapter extends PagerAdapter {
 }
 
 /**
- * @author wudkj viewPager的创建类
+ * @author  viewPager的创建类
  */
-class Zhang_ViewPager extends ViewPager {
+class CustomerViewPager extends ViewPager {
 
 	int mLastMotionY;
 	int mLastMotionX;
 
-	public Zhang_ViewPager(Context context) {
+	public CustomerViewPager(Context context) {
 		super(context);
 	}
 
-	public Zhang_ViewPager(Context context, AttributeSet attrs) {
+	public CustomerViewPager(Context context, AttributeSet attrs) {
 		super(context, attrs);
 	}
 

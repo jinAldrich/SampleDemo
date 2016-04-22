@@ -20,14 +20,14 @@ public class AutoSlideViewPagerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auto_silde_view_pager);
-        l=(LinearLayout) findViewById(R.id.sdss);
-        ArrayList<ImageView> lists=getImages();
-        final AutoSlideViewpagerAndPoint vp=new AutoSlideViewpagerAndPoint(AutoSlideViewPagerActivity.this,lists);
+        l = (LinearLayout) findViewById(R.id.autoViewPagerContainer);
+        ArrayList<ImageView> lists = getImages();
+        final AutoSlideViewpagerAndPoint vp = new AutoSlideViewpagerAndPoint(AutoSlideViewPagerActivity.this, lists);
         vp.startRoll(true);
         vp.setOnPagerClick(new AutoSlideViewpagerAndPoint.onPagerClick() {
             @Override
             public void pagerDoSomething(View imageView, int positon) {
-                Toast.makeText(AutoSlideViewPagerActivity.this, ""+positon, Toast.LENGTH_SHORT).show();
+                Toast.makeText(AutoSlideViewPagerActivity.this, "" + positon, Toast.LENGTH_SHORT).show();
             }
         });
         vp.setTIME(3000);
@@ -41,7 +41,7 @@ public class AutoSlideViewPagerActivity extends AppCompatActivity {
         vp.setmGravityType(AutoSlideViewpagerAndPoint.GRAVITY_LINE_CENTER);
         //vp.setAnimationType(Zhang_ViewPagerAndPoint.ANIMATION_DepthPageTransformer);
         //所有的操作都应该在setViewPagerAndPoint之前完成
-        FrameLayout fl=vp.setViewPagerAndPoint();
+        FrameLayout fl = vp.setViewPagerAndPoint();
         l.addView(fl);
     }
     private ArrayList<ImageView> getImages() {
