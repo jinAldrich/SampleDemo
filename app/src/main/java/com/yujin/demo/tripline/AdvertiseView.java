@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.yujin.demo.R;
+import com.yujin.widget.autoviewpager.AutoSlideViewpagerAndPoint;
 
 import java.util.ArrayList;
 
@@ -63,18 +64,18 @@ public class AdvertiseView extends LinearLayout{
 
     private ArrayList<ImageView> getImages() {
         ArrayList<ImageView> ivs=new ArrayList<ImageView>();
-        ImageView iv1=new ImageView(mContext);
-        iv1.setBackgroundResource(R.drawable.new_homepage_jiujiang_bg);
-        ivs.add(iv1);
-        ImageView iv2=new ImageView(mContext);
-        iv2.setBackgroundResource(R.drawable.new_homepage_anshan_bg);
-        ivs.add(iv2);
-        ImageView iv3=new ImageView(mContext);
-        iv3.setBackgroundResource(R.drawable.new_homepage_bg);
-        ivs.add(iv3);
-        ImageView iv4=new ImageView(mContext);
-        iv4.setBackgroundResource(R.drawable.new_homepage_anshan_bg);
-        ivs.add(iv4);
+//        ImageView iv1=new ImageView(mContext);
+//        iv1.setBackgroundResource(R.drawable.new_homepage_jiujiang_bg);
+//        ivs.add(iv1);
+//        ImageView iv2=new ImageView(mContext);
+//        iv2.setBackgroundResource(R.drawable.new_homepage_anshan_bg);
+//        ivs.add(iv2);
+//        ImageView iv3=new ImageView(mContext);
+//        iv3.setBackgroundResource(R.drawable.new_homepage_bg);
+//        ivs.add(iv3);
+//        ImageView iv4=new ImageView(mContext);
+//        iv4.setBackgroundResource(R.drawable.new_homepage_anshan_bg);
+//        ivs.add(iv4);
         return ivs;
     }
 }

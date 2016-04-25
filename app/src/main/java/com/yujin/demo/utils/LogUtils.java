@@ -1,6 +1,7 @@
 package com.yujin.demo.utils;
 
 import com.orhanobut.logger.Logger;
+import com.yujin.demo.BuildConfig;
 
 /**
  *

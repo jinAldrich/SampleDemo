@@ -1,5 +1,4 @@
-include ':app', ':Foundlibrary'
+include ':app'
+include ':Foundlibrary'
 include ':UILibrary'
-include 'Foundlibrary'
 include 'Toolbar'
-include 'nice-spinner-master'

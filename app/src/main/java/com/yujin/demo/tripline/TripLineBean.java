@@ -3,7 +3,7 @@ package com.yujin.demo.tripline;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.baidai.baidaitravel.ui.base.bean.BaseBean;
+import com.yujin.demo.base.bean.BaseBean;
 
 import java.util.ArrayList;
 

@@ -11,10 +11,11 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.baidai.baidaitravel.R;
-import com.baidai.baidaitravel.ui.base.activity.BaseActivity;
-import com.baidai.baidaitravel.widget.xrecycleview.ProgressStyle;
-import com.baidai.baidaitravel.widget.xrecycleview.XRecyclerView;
+
+import com.yujin.demo.BaseActivity;
+import com.yujin.demo.R;
+import com.yujin.xrecyclerview.ProgressStyle;
+import com.yujin.xrecyclerview.XRecyclerView;
 
 import java.util.ArrayList;
 
@@ -57,7 +58,7 @@ public class TripLineActivity extends BaseActivity {
             mXRecyclerView.setLayoutManager(linearLayoutManager);
             mXRecyclerView.setHasFixedSize(true);
             mXRecyclerView.setRefreshProgressStyle(ProgressStyle.BallSpinFadeLoader);
-            mXRecyclerView.setLoadingMoreProgressStyle(ProgressStyle.BallRotate);
+            //mXRecyclerView.setLoadingMoreProgressStyle(ProgressStyle.BallRotate);
             Log.i(TAG, "tripLineBeanItems.size(): " + tripLineBeanItems.size());
             mXRecyclerView.setAdapter(mTripLineAdapter == null ? mTripLineAdapter = new TripLineAdapter(this, tripLineBeanItems) : mTripLineAdapter);
             //隐藏下拉加载更多
@@ -88,21 +89,21 @@ public class TripLineActivity extends BaseActivity {
     private void createData() {
         TripLineBean.TripLineBeanItemBean bean0 = new TripLineBean.TripLineBeanItemBean();
         //广告
-        ArrayList<ImageView> ivs=new ArrayList<ImageView>();
-        ImageView iv1=new ImageView(TripLineActivity.this);
-        iv1.setBackgroundResource(R.drawable.new_homepage_jiujiang_bg);
-        ivs.add(iv1);
-        ImageView iv2=new ImageView(TripLineActivity.this);
-        iv2.setBackgroundResource(R.drawable.new_homepage_anshan_bg);
-        ivs.add(iv2);
-        ImageView iv3=new ImageView(TripLineActivity.this);
-        iv3.setBackgroundResource(R.drawable.new_homepage_bg);
-        ivs.add(iv3);
-        ImageView iv4=new ImageView(TripLineActivity.this);
-        iv4.setBackgroundResource(R.drawable.new_homepage_anshan_bg);
-        ivs.add(iv4);
-        bean0.setType(0);
-        bean0.getAdvertiseImage().addAll(ivs);
+//        ArrayList<ImageView> ivs=new ArrayList<ImageView>();
+//        ImageView iv1=new ImageView(TripLineActivity.this);
+//        iv1.setBackgroundResource(R.drawable.new_homepage_jiujiang_bg);
+//        ivs.add(iv1);
+//        ImageView iv2=new ImageView(TripLineActivity.this);
+//        iv2.setBackgroundResource(R.drawable.new_homepage_anshan_bg);
+//        ivs.add(iv2);
+//        ImageView iv3=new ImageView(TripLineActivity.this);
+//        iv3.setBackgroundResource(R.drawable.new_homepage_bg);
+//        ivs.add(iv3);
+//        ImageView iv4=new ImageView(TripLineActivity.this);
+//        iv4.setBackgroundResource(R.drawable.new_homepage_anshan_bg);
+//        ivs.add(iv4);
+//        bean0.setType(0);
+//        bean0.getAdvertiseImage().addAll(ivs);
 
         //交通和本地玩乐
         TripLineBean.TripLineBeanItemBean bean1 = new TripLineBean.TripLineBeanItemBean();

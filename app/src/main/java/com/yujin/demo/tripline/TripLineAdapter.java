@@ -8,6 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
+import com.yujin.demo.R;
+import com.yujin.demo.base.adapter.BaseRecyclerAdapter;
+
 import java.util.ArrayList;
 
 /**

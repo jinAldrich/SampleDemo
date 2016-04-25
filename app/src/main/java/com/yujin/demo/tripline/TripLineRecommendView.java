@@ -12,9 +12,9 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.baidai.baidaitravel.R;
-import com.baidai.baidaitravel.ui.base.adapter.BaseRecyclerAdapter;
 import com.facebook.drawee.view.SimpleDraweeView;
+import com.yujin.demo.R;
+import com.yujin.demo.base.adapter.BaseRecyclerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -7,7 +7,6 @@
       <module fileurl="file://$PROJECT_DIR$/Toolbar/Toolbar.iml" filepath="$PROJECT_DIR$/Toolbar/Toolbar.iml" />
       <module fileurl="file://$PROJECT_DIR$/UILibrary/UILibrary.iml" filepath="$PROJECT_DIR$/UILibrary/UILibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/nice-spinner-master/nice-spinner-master.iml" filepath="$PROJECT_DIR$/nice-spinner-master/nice-spinner-master.iml" />
     </modules>
   </component>
 </project>

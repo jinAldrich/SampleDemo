@@ -3,8 +3,9 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="$USER_HOME$/software/gradle-2.12" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -12,7 +13,6 @@
             <option value="$PROJECT_DIR$/Toolbar" />
             <option value="$PROJECT_DIR$/UILibrary" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/nice-spinner-master" />
           </set>
         </option>
         <option name="myModules">
@@ -22,7 +22,6 @@
             <option value="$PROJECT_DIR$/Toolbar" />
             <option value="$PROJECT_DIR$/UILibrary" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/nice-spinner-master" />
           </set>
         </option>
       </GradleProjectSettings>
