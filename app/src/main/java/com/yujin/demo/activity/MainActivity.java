@@ -27,6 +27,8 @@ public class MainActivity extends BaseActivity {
     Button button5;
     @Bind(R.id.button6)
     Button button6;
+    @Bind(R.id.button7)
+    Button button7;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +37,7 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.button, R.id.button2, R.id.button3, R.id.button4, R.id.button5, R.id.button6})
+    @OnClick({R.id.button, R.id.button2, R.id.button3, R.id.button4, R.id.button5, R.id.button6, R.id.button7})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button:
@@ -61,6 +63,11 @@ public class MainActivity extends BaseActivity {
                 Intent intent6 = new Intent();
                 intent6.setClass(this, com.yujin.demo.activity.AutoSlideViewPagerActivity.class);
                 startActivity(intent6);
+                break;
+            case R.id.button7:
+                Intent intent7 = new Intent();
+                intent7.setClass(this, RxJavaActivity.class);
+                startActivity(intent7);
                 break;
         }
     }

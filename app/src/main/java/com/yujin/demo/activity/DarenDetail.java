@@ -35,6 +35,7 @@ import com.yujin.demo.view.BorderTextView;
 import com.yujin.demo.view.CircleImageView;
 import com.yujin.demo.view.HeaderView;
 import com.yujin.demo.view.MyLinearLayout;
+import com.yujin.demo.view.TagLinearLayout;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -47,7 +48,7 @@ public class DarenDetail extends BaseActivity implements HeaderView{
     @Bind(R.id.ll_header_networkname)
     TextView llHeaderNetworkname;
     @Bind(R.id.ll_header_impression)
-    MyLinearLayout llHeaderImpression;
+    TagLinearLayout llHeaderImpression;
     @Bind(R.id.ll_header_motto)
     TextView llHeaderMotto;
     @Bind(R.id.head_bg)
@@ -113,9 +114,10 @@ public class DarenDetail extends BaseActivity implements HeaderView{
 
         //动态添加TextView
         LinearLayout.LayoutParams params = (LinearLayout.LayoutParams)llHeaderImpression.getLayoutParams();
-        params.setMargins(0,10,0,0);
-        params.gravity = Gravity.CENTER;
-        llHeaderImpression.setLayoutParams(params);
+//        params.setMargins(0,10,0,0);
+//        params.gravity = Gravity.CENTER;
+//        llHeaderImpression.setLayoutParams(params);
+        llHeaderImpression.setOnlyOneLine(true);
         //---
         BorderTextView textView1 = new BorderTextView(this);
         textView1.setText("百代dd游1");
@@ -132,13 +134,28 @@ public class DarenDetail extends BaseActivity implements HeaderView{
         textView4.setText("百代4");
         textView4.setStyle(R.style.BorderTextView);
         BorderTextView textView5 = new BorderTextView(this);
-        textView5.setText("百代旅游55");
+        textView5.setText("百代旅游555555百代旅游555555");
         textView5.setStyle(R.style.BorderTextView);
+
+        BorderTextView textView6 = new BorderTextView(this);
+        textView6.setText("百代旅游66");
+        textView6.setStyle(R.style.BorderTextView);
+
+        BorderTextView textView7 = new BorderTextView(this);
+        textView7.setText("百代旅游7777");
+        textView7.setStyle(R.style.BorderTextView);
+
+        BorderTextView textView8 = new BorderTextView(this);
+        textView8.setText("百代旅游88");
+        textView8.setStyle(R.style.BorderTextView);
         llHeaderImpression.addView(textView1);
         llHeaderImpression.addView(textView2);
         llHeaderImpression.addView(textView3);
         llHeaderImpression.addView(textView4);
         llHeaderImpression.addView(textView5);
+        llHeaderImpression.addView(textView6);
+        llHeaderImpression.addView(textView7);
+        llHeaderImpression.addView(textView8);
 //        for (int i = 0; i < 10; i++) {
 //            BorderTextView textView6 = new BorderTextView(this);
 //            textView6.setText("百代旅");

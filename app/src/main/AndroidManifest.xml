@@ -25,7 +25,6 @@
         <activity android:name="xrecyclerview.LinearActivity" />
         <activity android:name="xrecyclerview.GridActivity" />
         <activity android:name="xrecyclerview.StaggeredGridActivity" />
-        <activity android:name=".activity.DarenDetail2" />
 
         <!-- 下拉放大Header演示 -->
         <activity android:name=".zoom.activity.MainActivity" />
@@ -36,7 +35,8 @@
         <activity android:name=".zoom.activity.PullViewActivity" />
         <activity android:name=".zoom.activity.PullViewGroupActivity" />
         <activity android:name=".zoom.activity.PullWebViewActivity" />
-        <activity android:name=".activity.AutoSlideViewPagerActivity"></activity>
+        <activity android:name=".activity.AutoSlideViewPagerActivity" />
+        <activity android:name=".activity.RxJavaActivity"></activity>
     </application>
 
 </manifest>

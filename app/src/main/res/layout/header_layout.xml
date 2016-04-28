@@ -30,32 +30,32 @@
         android:textSize="16sp"
         android:textStyle="bold" />
 
-    <com.yujin.demo.view.MyLinearLayout
+    <com.yujin.demo.view.TagLinearLayout
         android:id="@+id/ll_header_impression"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
         android:orientation="horizontal">
 
-        <com.yujin.demo.view.BorderTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="文艺青年"
-            style="@style/BorderTextView" />
+        <!--<com.yujin.demo.view.BorderTextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="文艺青年"-->
+            <!--style="@style/BorderTextView" />-->
 
-        <com.yujin.demo.view.BorderTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="大叔控"
-            style="@style/BorderTextView"/>
+        <!--<com.yujin.demo.view.BorderTextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="大叔控"-->
+            <!--style="@style/BorderTextView"/>-->
 
-        <com.yujin.demo.view.BorderTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="开心果"
-            style="@style/BorderTextView"/>
-    </com.yujin.demo.view.MyLinearLayout>
+        <!--<com.yujin.demo.view.BorderTextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="开心果"-->
+            <!--style="@style/BorderTextView"/>-->
+    </com.yujin.demo.view.TagLinearLayout>
 
     <TextView
         android:id="@+id/ll_header_motto"
