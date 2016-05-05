@@ -10,31 +10,31 @@ public class Student implements Comparator<Student>{
     /**
      * 学生Id
      */
-    private long id;
+    private long id = 10001;
     /**
      * 学生姓名
      */
-    private String name;
+    private String name = "张三";
     /**
      * 学生年龄
      */
-    private int age;
+    private int age = 24;
     /**
      * 学生体重
      */
-    private int weight;
+    private int weight = 78;
     /**
      * 学生身高
      */
-    private int height;
+    private int height = 180;
     /**
      * 学生照片
      */
-    private String photo;
+    private String photo = "default photo";
     /**
      * 学生简介
      */
-    private String profile;
+    private String profile = "张三是一名程序员";
 
     public long getId() {
         return id;
@@ -79,5 +79,30 @@ public class Student implements Comparator<Student>{
     @Override
     public int compare(Student lhs, Student rhs) {
         return 0;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    @Override
+    public String toString() {
+        return "[" +"id: " + id + " name: " + name
+                + " age: " + age + " weight: " + weight
+                + " height: " + height + " photo: " + photo
+                + " profile: " + profile + "]";
+
     }
 }
