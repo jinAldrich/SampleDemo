@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/yujin/AndroidStudioProjects/SampleDemo/SuperRecyclerview/build/intermediates/res/merged/debug/mipmap-hdpi-v4/ic_launcher.png",
+        "source": "/Users/yujin/AndroidStudioProjects/SampleDemo/SuperRecyclerview/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/yujin/AndroidStudioProjects/BDTripDemo/SuperRecyclerview/build/intermediates/res/merged/debug/mipmap-hdpi-v4/ic_launcher.png",
+        "source": "/Users/yujin/AndroidStudioProjects/BDTripDemo/SuperRecyclerview/src/main/res/mipmap-hdpi/ic_launcher.png"
+    }
+]

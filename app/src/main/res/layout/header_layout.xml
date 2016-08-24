@@ -38,23 +38,24 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <!--<com.yujin.demo.view.BorderTextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="文艺青年"-->
-            <!--style="@style/BorderTextView" />-->
+        <com.yujin.demo.view.BorderTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="文艺青年"
+            style="@style/BorderTextView" />
 
-        <!--<com.yujin.demo.view.BorderTextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="大叔控"-->
-            <!--style="@style/BorderTextView"/>-->
+        <com.yujin.demo.view.BorderTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="大叔控"
+            style="@style/BorderTextView"/>
 
-        <!--<com.yujin.demo.view.BorderTextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="开心果"-->
-            <!--style="@style/BorderTextView"/>-->
+        <com.yujin.demo.view.BorderTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开心果"
+            style="@style/BorderTextView"/>
+
     </com.yujin.demo.view.TagLinearLayout>
 
     <TextView

@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BDTripDemo.iml" filepath="$PROJECT_DIR$/BDTripDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Foundlibrary/Foundlibrary.iml" filepath="$PROJECT_DIR$/Foundlibrary/Foundlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SampleDemo.iml" filepath="$PROJECT_DIR$/SampleDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SuperRecyclerview/SuperRecyclerview.iml" filepath="$PROJECT_DIR$/SuperRecyclerview/SuperRecyclerview.iml" />
       <module fileurl="file://$PROJECT_DIR$/Toolbar/Toolbar.iml" filepath="$PROJECT_DIR$/Toolbar/Toolbar.iml" />
       <module fileurl="file://$PROJECT_DIR$/UILibrary/UILibrary.iml" filepath="$PROJECT_DIR$/UILibrary/UILibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itemtouchhelper/itemtouchhelper.iml" filepath="$PROJECT_DIR$/itemtouchhelper/itemtouchhelper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/slidingbutton/slidingbutton.iml" filepath="$PROJECT_DIR$/slidingbutton/slidingbutton.iml" />
     </modules>
   </component>
 </project>

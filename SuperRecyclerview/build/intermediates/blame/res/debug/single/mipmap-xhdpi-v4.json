@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/Users/yujin/AndroidStudioProjects/BDTripDemo/SuperRecyclerview/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_launcher.png",
+        "source": "/Users/yujin/AndroidStudioProjects/BDTripDemo/SuperRecyclerview/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/yujin/AndroidStudioProjects/SampleDemo/SuperRecyclerview/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_pulltorefresh_arrow.png",
+        "source": "/Users/yujin/AndroidStudioProjects/SampleDemo/SuperRecyclerview/src/main/res/mipmap-xhdpi/ic_pulltorefresh_arrow.png"
+    },
+    {
+        "merged": "/Users/yujin/AndroidStudioProjects/SampleDemo/SuperRecyclerview/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_launcher.png",
+        "source": "/Users/yujin/AndroidStudioProjects/SampleDemo/SuperRecyclerview/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/yujin/AndroidStudioProjects/SampleDemo/SuperRecyclerview/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/fox.png",
+        "source": "/Users/yujin/AndroidStudioProjects/SampleDemo/SuperRecyclerview/src/main/res/mipmap-xhdpi/fox.png"
+    },
+    {
+        "merged": "/Users/yujin/AndroidStudioProjects/BDTripDemo/SuperRecyclerview/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_pulltorefresh_arrow.png",
+        "source": "/Users/yujin/AndroidStudioProjects/BDTripDemo/SuperRecyclerview/src/main/res/mipmap-xhdpi/ic_pulltorefresh_arrow.png"
+    },
+    {
+        "merged": "/Users/yujin/AndroidStudioProjects/SampleDemo/SuperRecyclerview/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/fop.png",
+        "source": "/Users/yujin/AndroidStudioProjects/SampleDemo/SuperRecyclerview/src/main/res/mipmap-xhdpi/fop.png"
+    },
+    {
+        "merged": "/Users/yujin/AndroidStudioProjects/BDTripDemo/SuperRecyclerview/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_pulltorefresh_arrow_up.png",
+        "source": "/Users/yujin/AndroidStudioProjects/BDTripDemo/SuperRecyclerview/src/main/res/mipmap-xhdpi/ic_pulltorefresh_arrow_up.png"
+    },
+    {
+        "merged": "/Users/yujin/AndroidStudioProjects/BDTripDemo/SuperRecyclerview/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/fox.png",
+        "source": "/Users/yujin/AndroidStudioProjects/BDTripDemo/SuperRecyclerview/src/main/res/mipmap-xhdpi/fox.png"
+    },
+    {
+        "merged": "/Users/yujin/AndroidStudioProjects/SampleDemo/SuperRecyclerview/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_pulltorefresh_arrow_up.png",
+        "source": "/Users/yujin/AndroidStudioProjects/SampleDemo/SuperRecyclerview/src/main/res/mipmap-xhdpi/ic_pulltorefresh_arrow_up.png"
+    },
+    {
+        "merged": "/Users/yujin/AndroidStudioProjects/BDTripDemo/SuperRecyclerview/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/fop.png",
+        "source": "/Users/yujin/AndroidStudioProjects/BDTripDemo/SuperRecyclerview/src/main/res/mipmap-xhdpi/fop.png"
+    }
+]
